@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<!-- saved from url=(0090)https://www.paypal.com/webapps/hermes/component-meta?xcomponent=1&version=4&env=production -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><!--[if IE 8]><style>.ng-hide {display: none !important;}</style><![endif]--><style type="text/css">@charset "UTF-8";[ng\:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak,.ng-hide:not(.ng-hide-animate){display:none !important;}ng\:form{display:block;}.ng-animate-shim{visibility:hidden;}.ng-anchor{position:absolute;}</style>
+        
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+        <meta name="robots" content="noindex">
+
+        <title>PayPal</title>
+    </head>
+
+    <body>
+
+        <script src="./checkout.js" data-paypal-checkout="" data-no-bridge="" data-state="ppxo_meta" data-env="production"></script>
+
+        <script>
+            (function() {
+
+                window.prefetch = true;
+
+                function noop() {}
+
+                window.addContent = noop;
+                window.addMetadata = noop;
+                window.beacon = noop;
+
+                function cookiesEnabled() {
+                    var cookiesEnabled;
+                    document.cookie = '_cookiecheck=1';
+                    cookiesEnabled = Boolean(document.cookie.indexOf('_cookiecheck') > -1);
+                    document.cookie = '_cookiecheck; expires=Thu, 01 Jan 1970 00:00:01 GMT;';
+                    document.cookie = '_cookiecheck=; expires=Thu, 01 Jan 1970 00:00:01 GMT;';
+                    return cookiesEnabled;
+                }
+
+                var data = {};
+
+                window.preload = function(method, url, res, name) {
+                    data[name] = res;
+                };
+
+                function getLightboxEligibility() {
+
+                    if (false) {
+                        return {
+                            eligible: false,
+                            reason: 'disabled_by_config'
+                        };
+                    }
+
+                    if (!cookiesEnabled()) {
+                        return {
+                            eligible: false,
+                            reason: 'third_party_cookies_disabled'
+                        };
+                    }
+
+                    if (data.auth.data.guest) {
+                        return {
+                            eligible: false,
+                            reason: 'guest'
+                        };
+                    }
+
+                    if (data.auth.data.logged_in || data.auth.data.remembered || data.auth.data.refresh_token) {
+                        return {
+                            eligible: true,
+                            reason: 'one_touch_authed'
+                        };
+                    }
+
+                    return {
+                        eligible: false,
+                        reason: 'one_touch_unauthed'
+                    };
+                }
+
+                window.preloadComplete = function() {
+
+                    var eligibility = getLightboxEligibility();
+
+                    ppxo.postRobot.sendToParent('meta', {
+                        locale: data.locale.data,
+                        iframeEligible: eligibility.eligible,
+                        iframeEligibleReason: eligibility.reason
+                    });
+                };
+            })();
+        </script>
+
+        <script src="./framework.js"></script>
+        <script src="./config.js"></script>
+        <script src="./main(2).js"></script>
+        <script src="./pa.js"></script>
+    
+
+
+<script>
+window.preload("get", "/webapps/hermes/api/auth", {
+    "ack": "success",
+    "data": {
+        "logged_in": false,
+        "guest": false,
+        "remembered": false,
+        "password_less": false,
+        "auth_state": "ANONYMOUS",
+        "refresh_token": false,
+        "access_token_present": false,
+        "is_auth_api_call": true,
+        "buyer_id": "",
+        "buyer_ipcountry": "MX",
+        "idTokenPresent": false,
+        "upsellOptInDisplayed": false,
+        "ryiOptIn": {
+            "termsDisplayed": false
+        },
+        "ota": false,
+        "remembered_device_token": false,
+        "remembered_partner_assertion": false
+    },
+    "meta": {
+        "calc": "141de80857d2c",
+        "rlog": "T3YM0fVlIghoTlYBHfMyFNfTilW24CZtSoXzapfaglyB%2FpAbRK5LXnegv7faAndou3i%2F%2FRqNUT4YDeLYw9VCtA_15cd11e7d94"
+    },
+    "server": "rnQHVawI4qMowOyinvPJIBUvjJOn0USRFK0S_AJxX_2SuDUYhQTk2lZeVyi3vNKu109U_jrUwUMm5GrkmqTBK4rs7NTu5_kPPDHmzJpoduRsbMiGMUonmt83d_UbYVhS75COBbFJohs0iQ4h72lA7V_VFFwnzcXJ5F7NQRiNoAXKDTa1rpLI-mu-3WSN6WNWr8D2-v5F2AMuAnpQxEL171AWCbUJ9tzCnovZ2MgkzHJgYsIZnENy_m"
+}, "auth");
+</script>
+
+<script>
+window.preload("get", "/webapps/hermes/api/locale?ipCountry=MX", {
+    "ack": "success",
+    "data": {
+        "country": "MX",
+        "lang": "es"
+    },
+    "meta": {
+        "calc": "141de80857d2c",
+        "rlog": "T3YM0fVlIghoTlYBHfMyFNfTilW24CZtSoXzapfaglyB%2FpAbRK5LXnegv7faAndou3i%2F%2FRqNUT4YDeLYw9VCtA_15cd11e7d94"
+    },
+    "server": "jDQgX2HZwHR9Xpsf0L18ZFoX-Mn_SuuydGLyQHBMsUnyGpNE6lFXj_TI1GSW9iigWUlXNrj6q8qKE97VHeYr1_uinBCEmOppPGfxcNysO7Eb7Iip0TQj_0AGzWANDybHwPfjhyq6jm3_DdkcLej1J9Q7z9CdAjGfkqXLghVq5RpbN6BYxlaSp3E-vRKeNcpAlRfH-yjyIwNBOeBo9DJqOhJdsFl56SgzYqUeJdAHg85cqrOCffo1RW"
+}, "locale");
+</script>
+
+<script>
+window.preloadComplete();
+</script>
+</body></html>
