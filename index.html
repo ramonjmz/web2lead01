@@ -500,7 +500,7 @@ window.authenticationPopup = {"customerRegisterUrl":"https:\/\/www.pinedacovalin
 </div>
 
 
-<form class="form create account form-create-account" action="https://pinedacovalin.demo.sugarcrm.com/index.php?entryPoint=WebToLeadCapture"  method="post" id="form-validate" enctype="multipart/form-data" autocomplete="off" novalidate="novalidate">
+<form id="WebToLeadForm" action="https://pinedacovalin.demo.sugarcrm.com/index.php?entryPoint=WebToLeadCapture" method="POST" name="WebToLeadForm">
 	<fieldset class="fieldset create info">
 		<legend class="legend"><span>Información Personal</span></legend><br>
 		<input type="hidden" name="success_url" value="">
@@ -573,6 +573,12 @@ window.authenticationPopup = {"customerRegisterUrl":"https:\/\/www.pinedacovalin
 			<a class="action back" href="https://www.pinedacovalin.com/customer/account/login/"><span>Atrñas</span></a>
 		</div>
 	</div>
+	<input id="campaign_id" type="hidden" name="campaign_id" value="dcbd7b94-5765-11e7-913a-02b6c8b587a1" />
+	<input id="redirect_url" type="hidden" name="redirect_url" value="http://www.pinedacovalin.com/" />
+	<input id="assigned_user_id" type="hidden" name="assigned_user_id" value="6513f712-5756-11e7-859a-063b661e1dc5" />
+	<input id="team_id" type="hidden" name="team_id" value="1" />
+	<input id="team_set_id" type="hidden" name="team_set_id" value="1" />
+	<input id="req_id" type="hidden" name="req_id" value="last_name;" />
 </form>
 <script>
 require([
